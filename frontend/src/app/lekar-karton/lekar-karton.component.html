@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/lekar">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/razno">Razno</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+
+<div class="row g-5" id="row1">
+    <div class="col-md-6" id="div1">
+        <h4>Prethodni izveštaji za pacijenta {{pacijent.ime}} {{pacijent.prezime}} </h4>
+        
+        <div *ngFor="let i of izvestaji" class="p-2 klasica">
+            <h5>Izveštaj lekara specijaliste za pregled: {{i.nazivPregleda}}</h5>
+            <strong>Pacijent:</strong> {{pacijent.ime}} {{pacijent.prezime}}<br/>
+            <strong>Lekar:</strong> {{i.lekar_ime_prezime}}, {{i.spec}}<br/>
+            <strong>Datum pregleda:</strong> {{i.datum_vreme.toLocaleString().slice(0,i.datum_vreme.toLocaleString().lastIndexOf(":"))}}<br/>
+            <strong>Razlog dolaska:</strong> {{i.razlogDolaska}}<br/>
+            <strong>Dijagnoza:</strong> {{i.dijagnoza}}<br/>
+            <strong>Preporučena terapija:</strong> {{i.terapija}}<br/>
+            <strong>Preporučen datum kontrole:</strong> {{i.kontrola.toLocaleDateString()}}<br/>
+            
+        </div>
+        <br/><br/><br/><br/>
+
+    </div> 
+    <div class="col-md-4" id="div2">
+      <!--  
+      <h4>Unesi novi izveštaj</h4>
+        Pregledi za koje možete da unesete izveštaj:<br/>
+        <select class="form-select form-select-sm mt-3" aria-label=".form-select-sm example" [(ngModel)]="izabrani" (change)="dugme()">
+            <option *ngFor="let p of pregledi; let i = index;" [selected]="i===0" [value]="p.id">{{p.naziv}}, {{p.datum_vreme.toLocaleString().slice(0, p.datum_vreme.toLocaleString().lastIndexOf(":"))}}</option>
+        </select>
+        
+        <button [disabled]="dugmence" class="btn btn-secondary mt-3" (click)="prikazi()">Unesi</button>
+        <br/><br/>
+        <div *ngIf="flag">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label" for="razlog">Razlog dolaska</label>
+                    <textarea class="form-select" id="razlog" [(ngModel)]="razlog" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="dijagnoza">Dijagnoza</label>
+                    <textarea class="form-select" id="dijagnoza" [(ngModel)]="dijagnoza" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="terapija">Preporučena terapija</label>
+                    <textarea class="form-select" id="terapija" [(ngModel)]="terapija" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="kontrola">Preporučen datum kontrole</label>
+                    <textarea class="form-select" id="kontrola" [(ngModel)]="datum" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <button class="btn btn-secondary" (click)="unesiIzvestaj()">Potvrdi</button>
+            </form>
+
+        </div>
+        <br/><br/><br/>-->
+    </div>
+</div>
+

@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/pacijent">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/lekari">Lekari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/obavestenja">Obaveštenja</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Profil lekara</h4>
+        <img src="http://localhost:4000/uploads/{{lekar.slika}}" alt="Profilna slika">
+
+        <form>
+            <div class="mb-3">
+                <label for="ime" class="form-label">Ime</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ime" [(ngModel)]="lekar.ime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="prezime" class="form-label">Prezime</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="prezime" [(ngModel)]="lekar.prezime" [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <div class="mb-3">
+                <label for="spec" class="form-label">Specijalizacija</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="lekar.spec" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="ogranak" class="form-label">Ogranak</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ogranak" [(ngModel)]="lekar.ogranak" [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <br/><br/>
+        </form>
+    </div>
+    <div class="col-md-5" id="div2">
+        <button class="btn btn-secondary btn-sm" (click)="nazad()">Nazad na sve lekare</button>
+        <br/><br/>
+        <h5>Pregledi koje lekar obavlja</h5>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Trajanje</th>
+                    <th>Cena</th>
+                    <th>Zakaži pregled</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of pregledi">
+                    <td>{{l.naziv}}</td>
+                    <td>{{l.trajanje}}</td>
+                    <td>{{l.cena}}</td>
+                    <td>
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="zakazi(l.naziv)">Zakaži pregled</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/>
+    </div>
+</div>

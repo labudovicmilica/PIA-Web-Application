@@ -1,0 +1,22 @@
+#row1{
+    position: absolute;
+    top: 50px;
+    padding-top: 50px;
+    padding-left: 12vw;
+    max-width: 100%;
+    
+}
+
+#div1{
+    margin-right: 50px;
+    min-width: 35rem;
+}
+
+#div2{
+    margin-right:-5vw;
+    min-width: 30rem;
+}
+
+img{
+    max-width: 80px;
+}

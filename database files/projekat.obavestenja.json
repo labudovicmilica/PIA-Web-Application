@@ -1,0 +1,210 @@
+[{
+  "_id": {
+    "$oid": "64fcc900aef1299fd2249836"
+  },
+  "tekst": "Vaš pregled: Pregled grla zakazan za 12.9.2023. 16:30 je otkazan uz obrazlozenje lekara: Zbog bolesti nisam u mogućnosti da obavim pregled.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ff7d849bbdb762e4b77937"
+  },
+  "tekst": "Ne propustite specijalnu akciju od 10. septembra do 1. oktobra!\nNa sve preglede kardiologa dobijate dodatnih 10% popusta.",
+  "korisnik": "marija",
+  "procitano": true,
+  "__v": 0,
+  "id": 1
+},
+{
+  "_id": {
+    "$oid": "64ff7d849bbdb762e4b77938"
+  },
+  "tekst": "Ne propustite specijalnu akciju od 10. septembra do 1. oktobra!\nNa sve preglede kardiologa dobijate dodatnih 10% popusta.",
+  "korisnik": "elenica",
+  "procitano": false,
+  "__v": 0,
+  "id": 2
+},
+{
+  "_id": {
+    "$oid": "64ff7d849bbdb762e4b77939"
+  },
+  "tekst": "Ne propustite specijalnu akciju od 10. septembra do 1. oktobra!\nNa sve preglede kardiologa dobijate dodatnih 10% popusta.",
+  "korisnik": "pera",
+  "procitano": true,
+  "__v": 0,
+  "id": 3
+},
+{
+  "_id": {
+    "$oid": "64ff7d849bbdb762e4b7793a"
+  },
+  "tekst": "Ne propustite specijalnu akciju od 10. septembra do 1. oktobra!\nNa sve preglede kardiologa dobijate dodatnih 10% popusta.",
+  "korisnik": "ema",
+  "procitano": true,
+  "__v": 0,
+  "id": 4
+},
+{
+  "_id": {
+    "$oid": "6500df2d7b53c1a28e588eaa"
+  },
+  "tekst": "Cena pregleda: Pregled nosa je promenjena i sada iznosi 3000 dinara.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 15,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6500df2d7b53c1a28e588eab"
+  },
+  "tekst": "Cena pregleda: Pregled nosa je promenjena i sada iznosi 3000 dinara.",
+  "korisnik": "ema",
+  "procitano": true,
+  "id": 16,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6500df2d7b53c1a28e588eac"
+  },
+  "tekst": "Cena pregleda: Pregled nosa je promenjena i sada iznosi 3000 dinara.",
+  "korisnik": "marija",
+  "procitano": true,
+  "id": 17,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6501a10a3eaf7c0aa0af2c9a"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Holter EKG 24h. Vaš pregled je zakazan za 14.9.2023. 08:30",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 18,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6501a10a3eaf7c0aa0af2c9c"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Holter pritiska. Vaš pregled je zakazan za 14.9.2023. 08:00",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 19,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6501aaf94e9ed0cad80ec1dd"
+  },
+  "tekst": "Pregled: Pregled nosa zakazan za 20.9.2023. 14:15 je otkazan, jer je lekar uzeo odmor. Molimo Vas da pregled zakažete u drugom terminu.",
+  "korisnik": "marija",
+  "procitano": true,
+  "id": 21,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6501acae4e9ed0cad80ec203"
+  },
+  "tekst": "Pregled: Holter EKG 24h zakazan za 14.9.2023. 08:30 je otkazan, jer je lekar uzeo bolovanje. Molimo Vas da pregled zakažete u drugom terminu.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 22,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6501acae4e9ed0cad80ec205"
+  },
+  "tekst": "Pregled: Holter pritiska zakazan za 14.9.2023. 08:00 je otkazan, jer je lekar uzeo bolovanje. Molimo Vas da pregled zakažete u drugom terminu.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 23,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509f6abf045ca0135c442d0"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Pregled grla. Vaš pregled je zakazan za 1.9.2023. 12:00.",
+  "korisnik": "ema",
+  "procitano": true,
+  "id": 24,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509f6abf045ca0135c442d2"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Pregled nosa. Vaš pregled je zakazan za 11.9.2023. 12:00.",
+  "korisnik": "ema",
+  "procitano": true,
+  "id": 25,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a0f85f045ca0135c4442b"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Opšti pregled kardiologa. Vaš pregled je zakazan za 20.9.2023. 08:15.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 26,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a0f85f045ca0135c4442d"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Sistematski pregled. Vaš pregled je zakazan za 20.9.2023. 08:30.",
+  "korisnik": "pera",
+  "procitano": true,
+  "id": 27,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3eed8e3c748dc38bce11"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Holter pritiska. Vaš pregled je zakazan za 18.9.2023. 19:20.",
+  "korisnik": "marija",
+  "procitano": true,
+  "id": 28,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3eed8e3c748dc38bce13"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Holter EKG 24h. Vaš pregled je zakazan za 19.9.2023. 19:35.",
+  "korisnik": "marija",
+  "procitano": true,
+  "id": 29,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3eed8e3c748dc38bce15"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Kontrolni pregled. Vaš pregled je zakazan za 19.9.2023. 19:20.",
+  "korisnik": "marija",
+  "procitano": true,
+  "id": 30,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650abdf5484dcdc150819730"
+  },
+  "tekst": "Automatski podsetnik 24h pre pregleda: Pregled nosa. Vaš pregled je zakazan za 21.9.2023. 09:15.",
+  "korisnik": "ema",
+  "procitano": true,
+  "id": 32,
+  "__v": 0
+}]

@@ -1,0 +1,49 @@
+
+<div class="m-5 py-5" style="max-width: 40rem;">
+    <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+    <h4>Unesite sledeće podatke kako biste se registrovali</h4>
+    <form>
+        <div class="mb-3">
+            <label for="ime" class="form-label">Ime</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ime" [(ngModel)]="ime" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="prezime" class="form-label">Prezime</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="prezime" [(ngModel)]="prezime" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="mejl" class="form-label">I-mejl adresa</label>
+            <input style="border-color: rgb(107, 107, 107);" type="email" class="form-control" id="mejl" [(ngModel)]="mejl" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="kime" class="form-label">Korisničko ime</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="kime" [(ngModel)]="korisnickoIme" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="lozinka" class="form-label">Lozinka</label>
+            <input style="border-color: rgb(107, 107, 107);" type="password" class="form-control" id="lozinka" [(ngModel)]="lozinka" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="plozinka" class="form-label">Potvrda lozinke</label>
+            <input style="border-color: rgb(107, 107, 107);" type="password" class="form-control" id="plozinka" [(ngModel)]="plozinka" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="adresa" class="form-label">Adresa</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="adresa" [(ngModel)]="adresa" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="telefon" class="form-label">Broj telefona</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="telefon" [(ngModel)]="telefon" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="customFile">Vaša slika (opciono) <br/><p class="text-secondary">*prihvata se samo format .jpg i .png. Veličina može biti od 100x100 do 300x300</p></label>
+            <input style="border-color: rgb(107, 107, 107);" type="file" accept="image/png, image/jpeg" class="form-control" id="customFile" enctype="multipart/form-data" (change)="fileChoosen($event)">
+        </div>
+        
+        <button class="btn btn-primary" (click)="zahtev()">Pošalji zahtev za registraciju</button>
+    </form>
+    </div></div>
+    <p class="text-danger">{{error}}</p>
+
+  </div>

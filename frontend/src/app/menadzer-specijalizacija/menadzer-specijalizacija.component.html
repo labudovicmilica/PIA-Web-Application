@@ -1,0 +1,199 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/menadzer">Profil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Opcije</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/menadzer/registracija">Zahtevi za registraciju</a></li>
+              <li><a class="dropdown-item" href="/menadzer/korisnici">Rad sa korisnicima</a></li>
+              <li><a class="dropdown-item" href="/menadzer/specijalizacije">Specijalizacije i pregledi</a></li>
+              <li><a class="dropdown-item" href="/menadzer/promocije">Promocije i akcije</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Izmenite detalje pregleda</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="trajanje" class="form-label">Trajanje</label>
+              <textarea class="form-control" id="trajanje" [(ngModel)]="menjanje.trajanje" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="cena" class="form-label">Cena</label>
+              <textarea class="form-control" id="cena" [(ngModel)]="menjanje.cena" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+          <button type="button" class="btn btn-primary" [disabled]="!menjanje.cena" (click)="azurirajPotvrda()" data-bs-dismiss="modal">Potvrdi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel2">Novi pregled za specijalizaciju {{izabrana}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="naziv" class="form-label">Naziv</label>
+              <textarea class="form-control" id="naziv" [(ngModel)]="naziv" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="trajanje" class="form-label">Trajanje</label>
+              <textarea class="form-control" id="trajanje" [(ngModel)]="trajanje" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="cena" class="form-label">Cena</label>
+              <textarea class="form-control" id="cena" [(ngModel)]="cena" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+          <button type="button" class="btn btn-primary" [disabled]="!cena || !naziv" (click)="dodajPregled()" data-bs-dismiss="modal">Potvrdi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel3">Prihvati pregled</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <strong>Naziv: </strong> {{prihv.naziv}} <br/>
+            <strong>Specijalizacija: </strong> {{prihv.spec}}
+            <div class="mb-3">
+                <label for="trajanje" class="form-label">Trajanje</label>
+              <textarea class="form-control" id="trajanje" [(ngModel)]="trajanje2" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="cena" class="form-label">Cena</label>
+              <textarea class="form-control" id="cena" [(ngModel)]="cena2" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+          <button type="button" class="btn btn-primary" [disabled]="!cena2" (click)="prihvatiPregled()" data-bs-dismiss="modal">Potvrdi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Dodaj specijalizaciju</h4>
+        <form>
+            <div class="mb-3">
+                <label class="form-label" for="novaSpec">Naziv specijalizacije:</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="novaSpec" [(ngModel)]="novaSpec" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button class="btn btn-secondary" (click)="dodajSpec()">Dodaj</button>
+            <p class="text-danger">{{errSpec}}</p>
+            <p class="text-success mt">{{specRez}}</p>
+        </form>
+
+        <br/>
+        <h4>Zahtevi za nove preglede</h4>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Specijalizacija</th>
+                        <th>Prihvati</th>
+                        <th>Odbij</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of zahtevi">
+                        <td>{{l.naziv}}</td>
+                        <td>{{l.spec}}</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal3"  (click)="prihvati(l)">Prihvati</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btn-sm" (click)="odbij(l)">Odbij</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <br/><br/><br>
+
+
+
+    </div>
+    <div class="col-md-5" id="div2">
+        <h4>Ažuriranje pregleda za odabranu specijalizaciju</h4>
+        <select class="form-select form-select-sm mt-3" aria-label=".form-select-sm example" [(ngModel)]="izabrana" (change)="flag()">
+            <option *ngFor="let e of specijalizacije.entries(); let i = index;" [selected]="i==0"  [value]="e.slice(0, e.length-1)">{{e.slice(0, e.length-1)}}</option>
+        </select>
+        <br/>
+        <button class="btn btn-secondary mb-1" [disabled]="dis()" data-bs-toggle="modal" data-bs-target="#exampleModal2">Dodaj novi pregled</button>
+        <br/>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Trajanje</th>
+                        <th>Cena</th>
+                        <th>Ažuriraj</th>
+                        <th>Obriši</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of specijalizacije.get(izabrana)">
+                        <td>{{l.naziv}}</td>
+                        <td>{{l.trajanje}}</td>
+                        <td>{{l.cena}}</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="azuriraj(l)">Ažuriraj</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btn-sm" (click)="obrisi(l.naziv)">Obriši</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/><br/><br/>
+        </div>
+    </div>
+</div>

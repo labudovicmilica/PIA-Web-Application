@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "64fda6161c2da3b95f4b9499"
+  },
+  "idPregleda": 3,
+  "nazivPregleda": "Pregled grla",
+  "datum_vreme": {
+    "$date": "2023-09-01T10:00:00.000Z"
+  },
+  "lekar": "ana",
+  "spec": "Specijalista ORL",
+  "pacijent": "ema",
+  "razlogDolaska": "Pacijent se žali na otežano disanje.",
+  "dijagnoza": "Ustanovljeno je da pacijent ima blagu devijaciju nosa.",
+  "terapija": "Zakazan je rendgen nosa za 8.9.2023. godine. Kontrola nakon preuzetog snimka.",
+  "kontrola": {
+    "$date": "2023-09-11T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "650a109cf045ca0135c4445b"
+  },
+  "idPregleda": 4,
+  "lekar": "ana",
+  "spec": "Specijalista ORL",
+  "pacijent": "ema",
+  "razlogDolaska": "Pacijent želi mišljenje o operaciji nosa.",
+  "dijagnoza": "Devijacija nosa je blaga i operacija nije potrebna.",
+  "terapija": "Nema.",
+  "kontrola": {
+    "$date": "2024-02-11T00:00:00.000Z"
+  },
+  "nazivPregleda": "Pregled nosa",
+  "datum_vreme": {
+    "$date": "2023-09-11T10:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3c6b8e3c748dc38bccb0"
+  },
+  "idPregleda": 24,
+  "lekar": "marko",
+  "spec": "Specijalista dermatologije",
+  "pacijent": "pera",
+  "razlogDolaska": "Mesečni tretman lica.",
+  "dijagnoza": "Lice je u dobrom stanju.",
+  "terapija": "Držati se preporučene rutine nege lica.",
+  "kontrola": {
+    "$date": "2023-09-11T22:00:00.000Z"
+  },
+  "nazivPregleda": "Hemijski piling kože",
+  "datum_vreme": {
+    "$date": "2023-08-12T10:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3d978e3c748dc38bcd69"
+  },
+  "idPregleda": 16,
+  "lekar": "sava",
+  "spec": "Specijalista kardiologije",
+  "pacijent": "marija",
+  "razlogDolaska": "Holter pritiska",
+  "dijagnoza": "Aparat je postavljen",
+  "terapija": "Pridržavati se uputstva za upotrebu holtera.",
+  "kontrola": {
+    "$date": "2023-09-18T22:00:00.000Z"
+  },
+  "nazivPregleda": "Holter pritiska",
+  "datum_vreme": {
+    "$date": "2023-09-18T17:20:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a3edf8e3c748dc38bcdf6"
+  },
+  "idPregleda": 25,
+  "lekar": "sava",
+  "spec": "Specijalista kardiologije",
+  "pacijent": "marija",
+  "razlogDolaska": "Holter pritiska",
+  "dijagnoza": "Sve je uredu.",
+  "terapija": "Ne izlagati se preteranom naporu.",
+  "kontrola": {
+    "$date": "2023-10-19T22:00:00.000Z"
+  },
+  "nazivPregleda": "Kontrolni pregled",
+  "datum_vreme": {
+    "$date": "2023-09-19T17:20:00.000Z"
+  },
+  "__v": 0
+}]

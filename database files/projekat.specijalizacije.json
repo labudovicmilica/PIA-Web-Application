@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "64fce0f0e4c634c492b4a562"
+  },
+  "naziv": "Specijalista ORL"
+},
+{
+  "_id": {
+    "$oid": "64fce13ae4c634c492b4a565"
+  },
+  "naziv": "Specijalista kardiologije"
+},
+{
+  "_id": {
+    "$oid": "64fce173e4c634c492b4a569"
+  },
+  "naziv": "Specijalista pedijatrije"
+},
+{
+  "_id": {
+    "$oid": "64ff00ecb884eaf7e81a53a5"
+  },
+  "naziv": "Specijalista radiologije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ff0145b884eaf7e81a53a9"
+  },
+  "naziv": "Specijalista neuropsihijatrije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509cfc1c43ff231ae5486d4"
+  },
+  "naziv": "Specijalista endokrinologije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d05cc43ff231ae5486f5"
+  },
+  "naziv": "Specijalista dermatologije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d206c43ff231ae548755"
+  },
+  "naziv": "Specijalista oftamologije",
+  "__v": 0
+}]

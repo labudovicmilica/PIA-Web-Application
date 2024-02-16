@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/lekar">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/razno">Razno</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Unesite obrazloženje za otkazivanje pregleda</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <textarea class="form-control" id="message-text" [(ngModel)]="obrazlozenje" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+          <button type="button" class="btn btn-primary" (click)="otkazi()" data-bs-dismiss="modal">Potvrdi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Predstojeći pregledi</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Datum i vreme</th>
+                    <th>Pacijent</th>
+                    <th>Otkaži</th>
+                    <th>Karton pacijenta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of pregledi">
+                    <td>{{p.naziv}}</td>
+                    <td>{{p.datum_vreme.toLocaleString().slice(0,p.datum_vreme.toLocaleString().lastIndexOf(":"))}}</td>
+                    <td>{{p.ime_prezime}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="p.id" (click)="uzmiId(p.id)">Otkaži</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="karton(p.pacijent)">Karton</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/>
+
+    </div>
+    <div class="col-md-5" id="div2">
+      <h4>Unesi novi izveštaj</h4>
+      Pregledi za koje možete da unesete izveštaj:<br/>
+      <select class="form-select form-select-sm mt-3" aria-label=".form-select-sm example" [(ngModel)]="izabrani" (change)="dugme()">
+          <option *ngFor="let p of prethodniPregledi; let i = index;" [selected]="i===0" [value]="p.id">{{p.ime_prezime}}: {{p.naziv}}, {{p.datum_vreme.toLocaleString().slice(0, p.datum_vreme.toLocaleString().lastIndexOf(":"))}}</option>
+      </select>
+      
+      <button [disabled]="dugmence" class="btn btn-secondary mt-3" (click)="prikazi()">Unesi</button>
+      <br/><br/>
+      <div *ngIf="flag">
+          <form>
+              <div class="mb-3">
+                  <label class="form-label" for="razlog">Razlog dolaska</label>
+                  <textarea class="form-select" id="razlog" [(ngModel)]="razlog" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="dijagnoza">Dijagnoza</label>
+                  <textarea class="form-select" id="dijagnoza" [(ngModel)]="dijagnoza" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="terapija">Preporučena terapija</label>
+                  <textarea class="form-select" id="terapija" [(ngModel)]="terapija" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="kontrola">Preporučen datum kontrole</label>
+                  <textarea class="form-select" id="kontrola" [(ngModel)]="datum" [ngModelOptions]="{standalone: true}"></textarea>
+              </div>
+              <button class="btn btn-secondary" (click)="unesiIzvestaj()">Potvrdi</button>
+          </form>
+
+      </div>
+      <br/><br/><br/>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/pacijent">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/lekari">Lekari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"s href="/pacijent/obavestenja">Obaveštenja</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <img src="http://localhost:4000/uploads/{{korisnik.slika}}" alt="Profilna slika">
+        &nbsp;&nbsp;
+        <button class="btn btn-secondary align-center mt-3" (click)="promenaSlike()">Promena slike</button>&nbsp;
+        <button class="btn btn-secondary align-center mt-3" (click)="azuriraj()">Ažuriranje profila</button>
+        
+        <form>
+            <div class="mb-3">
+                <label for="ime" class="form-label">Ime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ime" [(ngModel)]="korisnik.ime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="prezime" class="form-label">Prezime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="prezime" [(ngModel)]="korisnik.prezime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <!--
+            <div class="mb-3">
+                <label for="spec" class="form-label">Korisničko ime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.korisnickoIme" [ngModelOptions]="{standalone: true}">
+            </div>-->
+            <div class="mb-3">
+                <label for="spec" class="form-label">I-mejl adresa</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.mejl" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Adresa</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.adresa" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Telefon</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.telefon" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div *ngIf=!flag>
+                <button class="btn btn-secondary align-center mt-2" (click)="izmeni()">Izmeni</button>
+            </div>
+            <p class="text-danger">{{erroric}}</p>
+
+            
+            <br/><br/><br/><br/>
+        </form>
+    </div>
+    <div class="col-md-5" id="div2">
+      <div *ngIf=flag2>
+        <h4>Promena slike</h4>
+        <form>
+          <div class="mb-3">
+            <label class="form-label" for="customFile"><p class="text-secondary">*prihvata se samo format .jpg i .png. Veličina može biti od 100x100 do 300x300</p></label>
+            <input style="border-color: rgb(107, 107, 107);" type="file" accept="image/png, image/jpeg" class="form-control" id="customFile" enctype="multipart/form-data" (change)="fileChoosen($event)">
+            <br/>
+            <button class="btn btn-secondary mb-2" (click)="promeni()">Promeni</button>
+            <br/>
+            <p class="text-danger">{{error}}</p>
+          </div>
+        </form>
+        <br/><br/>
+      </div>
+      <div>
+        <h4>Promena lozinke</h4>
+        <p>Lozinku je poželjno menjati s vremena na vreme zbog sigurnosti podataka.</p>
+        <button class="btn btn-secondary mb-2" (click)="promeniLozinku()">Promeni lozinku</button>
+        <br/>
+        <br/><br/>
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Prikaz lekara</h4>
+        Sortiraj:<br/>
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajIme(true)">Ime &darr;</button>&nbsp;
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajPrezime(true)">Prezime &darr;</button>&nbsp;
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajSpec(true)">Specijalizacija &darr;</button>&nbsp;
+        <br/>
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajIme(false)">Ime &uarr;</button>&nbsp;
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajPrezime(false)">Prezime &uarr;</button>&nbsp;
+        <button type="button" class="btn btn-secondary btn-sm mb-1" (click)="sortirajSpec(false)">Specijalizacija &uarr;</button>&nbsp;      
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Slika</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Specijalizacija</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of lekari">
+                    <td><img src="http://localhost:4000/uploads/{{l.slika}}"></td>
+                    <td>{{l.ime}}</td>
+                    <td>{{l.prezime}}</td>
+                    <td>{{l.spec}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/>
+
+    </div>
+    <div class="col-md-5" id="div2">
+        <h4>Pretraga</h4>
+        <form>
+            <div class="mb-3">
+                <label for="ime" class="form-label">Ime</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ime" [(ngModel)]="ime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="prezime" class="form-label">Prezime</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="prezime" [(ngModel)]="prezime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Specijalizacija</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="spec" [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <button type="button" class="btn btn-secondary" (click)="pretraga()">Pretraži</button>
+            <br/><br/><br/><br/>
+        </form>
+    </div>
+</div>

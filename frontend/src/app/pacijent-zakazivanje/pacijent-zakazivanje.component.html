@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/pacijent">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/lekari">Lekari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/obavestenja">Obaveštenja</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Zakazivanje pregleda</h4>
+        <strong>Vrsta pregleda: </strong>{{pregled.naziv}}<br/>
+        <strong>Lekar:</strong> {{lekar.ime}} {{lekar.prezime}}, {{lekar.spec}}<br/>
+        <form>
+            <div class="mb-3">
+                <label for="datum" class="form-label">Datum<br/>*u formatu dd.mm.gggg</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="datum" [(ngModel)]="datum" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="vreme" class="form-label">Vreme <br/>*u formatu hh:mm</label>
+                <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="vreme" [(ngModel)]="vreme" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button class="btn btn-secondary" (click)="zakazi()">Zakaži</button>
+            <br/>
+            {{rezultat}}
+            <br/>
+            <br/>
+        </form>
+    </div>
+    <div class="col-md-5" id="div2">
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "6509ce9dc43ff231ae5486b1"
+  },
+  "naziv": "Ultrazvučni pregled sinusa",
+  "spec": "Specijalista ORL",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509df4cc43ff231ae5487f9"
+  },
+  "naziv": "Neuropsihološko testiranje",
+  "spec": "Specijalista neuropsihijatrije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509df8fc43ff231ae548806"
+  },
+  "naziv": "Psihološka procena ličnosti",
+  "spec": "Specijalista neuropsihijatrije",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509dfeac43ff231ae548817"
+  },
+  "naziv": "EEG standardni",
+  "spec": "Specijalista neuropsihijatrije",
+  "__v": 0
+}]

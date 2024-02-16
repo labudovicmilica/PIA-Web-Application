@@ -1,0 +1,117 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/lekar">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/razno">Razno</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <img src="http://localhost:4000/uploads/{{korisnik.slika}}" alt="Profilna slika">
+        &nbsp;&nbsp;
+        <button class="btn btn-secondary align-center mt-3" (click)="promenaSlike()">Promena slike</button>&nbsp;
+        <button class="btn btn-secondary align-center mt-3" (click)="azuriraj()">Ažuriranje profila</button>
+        
+        <form>
+            <div class="mb-3">
+                <label for="ime" class="form-label">Ime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ime" [(ngModel)]="korisnik.ime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="prezime" class="form-label">Prezime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="prezime" [(ngModel)]="korisnik.prezime" [ngModelOptions]="{standalone: true}">
+            </div>
+            <!--
+            <div class="mb-3">
+                <label for="spec" class="form-label">Korisničko ime</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.korisnickoIme" [ngModelOptions]="{standalone: true}">
+            </div>-->
+            <div class="mb-3">
+                <label for="spec" class="form-label">I-mejl adresa</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.mejl" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Adresa</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.adresa" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Telefon</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.telefon" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Specijalizacija</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="spec" [(ngModel)]="korisnik.spec" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="ogranak" class="form-label">Ogranak</label>
+                <input disabled style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="ogranak" [(ngModel)]="korisnik.ogranak" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for="lic" class="form-label">Broj licence</label>
+                <input disabled="{{flag}}" style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="lic" [(ngModel)]="korisnik.licenca" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div *ngIf=!flag>
+                <button class="btn btn-secondary align-center mt-3" (click)="izmeni()">Izmeni</button>
+            </div>
+
+            
+            <br/><br/><br/><br/>
+        </form>
+    </div>
+    <div class="col-md-5" id="div2">
+      <div *ngIf=flag2>
+        <h4>Promena slike</h4>
+        <form>
+          <div class="mb-3">
+            <label class="form-label" for="customFile"><p class="text-secondary">*prihvata se samo format .jpg i .png. Veličina može biti od 100x100 do 300x300</p></label>
+            <input style="border-color: rgb(107, 107, 107);" type="file" accept="image/png, image/jpeg" class="form-control" id="customFile" enctype="multipart/form-data" (change)="fileChoosen($event)">
+            <br/>
+            <button class="btn btn-secondary mb-2" (click)="promeni()">Promeni</button>
+            <br/>
+            <p class="text-danger">{{error}}</p>
+          </div>
+        </form>
+        <br/><br/>
+      </div>
+      <div>
+        <h4>Promena lozinke</h4>
+        <p>Lozinku je poželjno menjati s vremena na vreme zbog sigurnosti podataka.</p>
+        <button class="btn btn-secondary mb-2" (click)="promeniLozinku()">Promeni lozinku</button>
+        <br/>
+        <br/><br/>
+      </div>
+      <div>
+        <h4>Odabir pregleda koje želite da obavljate</h4>
+        <form>
+            <div *ngFor="let pr of pregledi; let i = index">
+                <div class="form-check">
+                    <input class="form-check-input" name="checkbox{{i}}" type="checkbox"  [(ngModel)]="pr['checked']" id="flexCheckDefault{{i}}">
+                    <label class="form-check-label" for="flexCheckDefault{{i}}">
+                      {{pr['naziv']}}
+                    </label>
+                  </div>
+            </div>
+            <button class="btn btn-secondary" (click)="izmeniPreglede()">Izmeni</button>
+        </form>
+      </div>
+    </div>
+</div>

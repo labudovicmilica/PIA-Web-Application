@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/lekar">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/lekar/razno">Razno</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+      <h4>Slobodan dan</h4>
+      <form>
+        <div class="mb-3">
+            <label for="slDan" class="form-label">Unesite datum kada želite da uzmete slobodan dan:</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="slDan" [(ngModel)]="slDan" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button class="btn btn-secondary" (click)="slobodanDan()">Potvdi</button>
+      </form>
+      {{porukaS}}
+      <br/>
+      <br/>
+
+      <h4>Godišnji odmor</h4>
+      <form>
+        <div class="mb-3">
+            <label for="odmor1" class="form-label">Prvi dan godišnjeg odmora:</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="odmor1" [(ngModel)]="odmor1" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+          <label for="odmor2" class="form-label">Poslednji dan godišnjeg odmora:</label>
+          <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="odmor2" [(ngModel)]="odmor2" [ngModelOptions]="{standalone: true}">
+      </div>
+        <button class="btn btn-secondary" (click)="odmor()">Potvdi</button>
+      </form>
+      {{porukaG}}
+      <br/>
+      <br/>
+    </div>
+    <div class="col-md-5" id="div2">
+      <h4>Zatražite novu vrstu pregleda</h4>
+      <form>
+          <div class="mb-3">
+              <label for="naziv" class="form-label">Naziv pregleda:</label>
+              <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="naziv" [(ngModel)]="naziv" [ngModelOptions]="{standalone: true}">
+          </div>
+          <button class="btn btn-secondary" (click)="predlozi()">Predloži</button>
+      </form>
+      {{poruka}}
+      <br/>
+      <br/>
+
+      <h4>Bolovanje</h4>
+      <form>
+        <div class="mb-3">
+            <label for="bolovanje1" class="form-label">Prvi dan bolovanja:</label>
+            <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="bolovanje1" [(ngModel)]="bolovanje1" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+          <label for="bolovanje2" class="form-label">Poslednji dan bolovanja:</label>
+          <input style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="bolovanje2" [(ngModel)]="bolovanje2" [ngModelOptions]="{standalone: true}">
+      </div>
+        <button class="btn btn-secondary" (click)="bolovanje()">Potvdi</button>
+      </form>
+      {{porukaB}}
+      <br/>
+      <br/>
+      
+
+  </div>
+</div>

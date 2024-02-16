@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/menadzer">Profil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Opcije</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/menadzer/registracija">Zahtevi za registraciju</a></li>
+              <li><a class="dropdown-item" href="/menadzer/korisnici">Rad sa korisnicima</a></li>
+              <li><a class="dropdown-item" href="/menadzer/specijalizacije">Specijalizacije i pregledi</a></li>
+              <li><a class="dropdown-item" href="/menadzer/promocije">Promocije i akcije</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+
+<div class="row g-5" id="row1">
+    <div class="col-md-12" id="div1">
+        Dodaj novog lekara: <button class="btn btn-secondary btn-sm" (click)="dodajLekara()">Dodaj</button>
+        <br/><br/><h4>Korisnici sistema</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Slika</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Korisnicko Ime</th>
+                    <th>I-mejl</th>
+                    <th>Tip</th>
+                    <th>Adresa</th>
+                    <th>Telefon</th>
+                    <th>Specijalizacija</th>
+                    <th>Ogranak</th>
+                    <th>Licenca</th>
+                    <th>Ažuriraj</th>
+                    <th>Obriši</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of korisnici">
+                    <td><img src="http://localhost:4000/uploads/{{l.slika}}"></td>
+                    <td>{{l.ime}}</td>
+                    <td>{{l.prezime}}</td>
+                    <td>{{l.korisnickoIme}}</td>
+                    <td>{{l.mejl}}</td>
+                    <td>{{l.tip}}</td>
+                    <td>{{l.adresa}}</td>
+                    <td>{{l.telefon}}</td>
+                    <td>{{l.spec}}</td>
+                    <td>{{l.ogranak}}</td>
+                    <td>{{l.licenca}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="azuriraj(l.korisnickoIme)">Ažuriraj</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="obrisi(l.korisnickoIme)">Obriši</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/menadzer">Profil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Opcije</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/menadzer/registracija">Zahtevi za registraciju</a></li>
+              <li><a class="dropdown-item" href="/menadzer/korisnici">Rad sa korisnicima</a></li>
+              <li><a class="dropdown-item" href="/menadzer/specijalizacije">Specijalizacije i pregledi</a></li>
+              <li><a class="dropdown-item" href="/menadzer/promocije">Promocije i akcije</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Specijalne promocije i akcije</h4>
+        <form>
+            <div class="mb-3">
+                <label for="datum" class="form-label">Unesite tekst specijalne promocije / akcije:</label>
+                <textarea style="border-color: rgb(107, 107, 107);" type="text" class="form-control" id="akcija" [(ngModel)]="akcija" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <button class="btn btn-secondary" (click)="potvrdi()">Potvrdi</button>
+            <br/>
+            {{rezultat}}
+            <br/>
+            <br/>
+        </form>
+    </div>
+</div>

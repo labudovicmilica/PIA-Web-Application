@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/pacijent">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/lekari">Lekari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/pregledi">Pregledi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pacijent/obavestenja">Obaveštenja</a>
+          </li>
+
+        </ul>
+        <button type="button" class="btn btn-secondary" (click)="odjaviSe()">Odjavi se</button>
+      </div>
+    </div>
+</nav>
+
+<div class="row g-5" id="row1">
+    <div class="col-md-5" id="div1">
+        <h4>Predstojeći pregledi</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Datum i vreme</th>
+                    <th>Ogranak</th>
+                    <th>Lekar</th>
+                    <th>Otkaži</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of pregledi">
+                    <td>{{p.naziv}}</td>
+                    <td>{{p.datum_vreme.toLocaleString().slice(0,p.datum_vreme.toLocaleString().lastIndexOf(":"))}}</td>
+                    <td>{{p.ogranak}}</td>
+                    <td>{{p.ime_prezime}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="otkazi(p.id)">Otkaži</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/><br/>
+    </div>
+    <div class="col-md-5" id="div1">
+      <h4>Prethodni izveštaji </h4>
+      <button class="btn btn-secondary btn-sm mt-2" [disabled]="true" (click)="stampajSve()">Štampaj sve izveštaje</button>
+
+        
+        <div *ngFor="let i of izvestaji" class="p-2 klasica">
+            <h5>Izveštaj lekara specijaliste za pregled: {{i.nazivPregleda}}</h5>
+            <strong>Pacijent:</strong> {{korisnik.ime}} {{korisnik.prezime}}<br/>
+            <strong>Lekar:</strong> {{i.lekar_ime_prezime}}, {{i.spec}}<br/>
+            <strong>Datum pregleda:</strong> {{i.datum_vreme.toLocaleString().slice(0,i.datum_vreme.toLocaleString().lastIndexOf(":"))}}<br/>
+            <strong>Razlog dolaska:</strong> {{i.razlogDolaska}}<br/>
+            <strong>Dijagnoza:</strong> {{i.dijagnoza}}<br/>
+            <strong>Preporučena terapija:</strong> {{i.terapija}}<br/>
+            <strong>Preporučen datum kontrole:</strong> {{i.kontrola.toLocaleDateString()}}<br/>
+            <button class="btn btn-secondary btn-sm mt-2" [disabled]="true" (click)="stampaj(i.idPregleda)">Štampaj izveštaj</button>
+        </div>
+        <br/><br/><br/><br/>
+    </div>
+</div>

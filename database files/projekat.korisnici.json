@@ -1,0 +1,322 @@
+[{
+  "_id": {
+    "$oid": "64f987d8d4103a93683c57b9"
+  },
+  "korisnickoIme": "zika",
+  "ime": "Zika",
+  "prezime": "Zikic",
+  "lozinka": "Zika123.",
+  "mejl": "zika@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Kralja Petra 4",
+  "telefon": "0647059567",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odbijen",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64f9d94fd6837c8efa47d8a4"
+  },
+  "korisnickoIme": "marija",
+  "ime": "Marija",
+  "prezime": "Marković",
+  "lozinka": "Marija123.",
+  "mejl": "marija@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Sinđelićeva 12, Čačak",
+  "telefon": "0628964563",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odobren",
+  "slika": "maki.jpg",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64f9f82ed6837c8efa47d8a8"
+  },
+  "korisnickoIme": "jovan",
+  "ime": "Jovan",
+  "prezime": "Jovanović",
+  "lozinka": "Jovan123.",
+  "mejl": "jovan@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Beogradska 24, Beograd",
+  "telefon": "069569123",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "cekanje",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fa0cf7d4103a93683c57c0"
+  },
+  "korisnickoIme": "dejan",
+  "ime": "Dejan",
+  "prezime": "Dejanović",
+  "lozinka": "Dejan123.",
+  "mejl": "dejan@gmail.com",
+  "tip": "lekar",
+  "adresa": "Braće Jerković 325, Beograd",
+  "telefon": "0642365498",
+  "licenca": "0123456",
+  "spec": "Specijalista pedijatrije",
+  "ogranak": "Vračar",
+  "status": "odobren",
+  "slika": "profile8.jpg",
+  "pregledi": [
+    "Pregled novorodjenceta",
+    "Sistematski pregled",
+    "Kontrolni pregled"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fb2d99225a688ef2d31fe4"
+  },
+  "korisnickoIme": "anica",
+  "ime": "Ana",
+  "prezime": "Marjanović",
+  "lozinka": "Anica123.",
+  "mejl": "anica@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Bulevar kralja Aleksandra 268, Beograd",
+  "telefon": "0641237895",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odbijen",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64fe2a22586451aeaee1101b"
+  },
+  "korisnickoIme": "elenica",
+  "ime": "Elena",
+  "prezime": "Elenković",
+  "lozinka": "Elena123.",
+  "mejl": "elena@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Svetog Save 45, Beograd",
+  "telefon": "0657894561",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odobren",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509b2529064c0e2813fc7c0"
+  },
+  "korisnickoIme": "pera",
+  "ime": "Petar",
+  "prezime": "Petrović",
+  "lozinka": "Pera123.",
+  "mejl": "pera@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Kralja Petra 4, Beograd",
+  "telefon": "0647059365",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odobren",
+  "slika": "profile9.jpg",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509b2f19064c0e2813fc7d3"
+  },
+  "korisnickoIme": "sava",
+  "ime": "Sava",
+  "prezime": "Savković",
+  "lozinka": "Sava123.",
+  "mejl": "sava@gmail.com",
+  "tip": "lekar",
+  "adresa": "Vojvode Stepe 236, Čačak",
+  "telefon": "069564123",
+  "licenca": "05489632",
+  "spec": "Specijalista kardiologije",
+  "ogranak": "Zeleni venac",
+  "status": "odobren",
+  "slika": "korisnik_default.png",
+  "pregledi": [
+    "Holter pritiska",
+    "Opšti pregled kardiologa",
+    "Holter EKG 24h",
+    "Kontrolni pregled"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509dec5c43ff231ae5487c1"
+  },
+  "korisnickoIme": "mira",
+  "ime": "Mira",
+  "prezime": "Nenadović",
+  "lozinka": "Mira123.",
+  "mejl": "mira@gmail.com",
+  "tip": "lekar",
+  "adresa": "Devet Jugovića 2, Čačak",
+  "telefon": "0651987453",
+  "licenca": "0156789",
+  "spec": "Specijalista neuropsihijatrije",
+  "ogranak": "Konjarnik",
+  "status": "odobren",
+  "slika": "korisnik_default.png",
+  "pregledi": [
+    "Ispitivanje refleksa",
+    "Psihodijagnostika",
+    "Kontrolni pregled"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509eaeac43ff231ae5488e7"
+  },
+  "korisnickoIme": "andrea",
+  "ime": "Andea",
+  "prezime": "Laketić",
+  "lozinka": "Andrea123.",
+  "mejl": "andrea@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Bulevar kralja Aleksandra 262, Beograd",
+  "telefon": "061564987",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "cekanje",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509ed0ac43ff231ae54890d"
+  },
+  "korisnickoIme": "gordana",
+  "ime": "Gordana",
+  "prezime": "Pavlović",
+  "lozinka": "Gordana123.",
+  "mejl": "gordana@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Ustanička 220, Beograd",
+  "telefon": "0657894561",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "cekanje",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509eeb6c43ff231ae548924"
+  },
+  "korisnickoIme": "ema",
+  "ime": "Ema",
+  "prezime": "Emić",
+  "lozinka": "Ema123.ema",
+  "mejl": "ema@gmail.com",
+  "tip": "pacijent",
+  "adresa": "Južni bulevar 89, Beograd",
+  "telefon": "0647089564",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "odobren",
+  "slika": "profile5.jpeg",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a14d0f045ca0135c4454f"
+  },
+  "korisnickoIme": "marko",
+  "ime": "Marko",
+  "prezime": "Erić",
+  "lozinka": "Marko123.",
+  "mejl": "marko@gmail.com",
+  "tip": "lekar",
+  "adresa": "Svetog Save 48, Beograd",
+  "telefon": "064569874",
+  "licenca": "0264547",
+  "spec": "Specijalista dermatologije",
+  "ogranak": "Vračar",
+  "status": "odobren",
+  "slika": "korisnik_default.png",
+  "pregledi": [
+    "Dermatoskopija",
+    "Terapija tečnim azotom",
+    "Hemijski piling kože",
+    "Kontrolni pregled"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a15c2f045ca0135c4456f"
+  },
+  "korisnickoIme": "mika",
+  "ime": "Mirko",
+  "prezime": "Mirkovic",
+  "lozinka": "Mika123.",
+  "mejl": "mika@gmail.com",
+  "tip": "menadzer",
+  "adresa": "Mihajla Pupina 54",
+  "telefon": "0615986548",
+  "licenca": null,
+  "spec": null,
+  "ogranak": null,
+  "status": "",
+  "slika": "korisnik_default.png",
+  "pregledi": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a15dbf045ca0135c44574"
+  },
+  "korisnickoIme": "ana",
+  "ime": "Ana",
+  "prezime": "Lazić",
+  "lozinka": "Ana123.ana",
+  "mejl": "ana@gmail.com",
+  "tip": "lekar",
+  "adresa": "Kraljice Marije 26, Beograd",
+  "telefon": "0625968456",
+  "licenca": "02656566",
+  "spec": "Specijalista ORL",
+  "ogranak": "Zvezdara",
+  "status": "odobren",
+  "slika": "profile6.jpg",
+  "pregledi": [
+    "Pregled nosa",
+    "Pregled grla",
+    "Kontrolni pregled"
+  ],
+  "__v": 0
+}]

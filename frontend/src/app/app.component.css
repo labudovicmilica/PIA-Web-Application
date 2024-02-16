@@ -1,0 +1,21 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+/*
+body {
+  background-color: #e0c3bb;
+}*//*
+.footer {
+  position: -webkit-sticky;
+  bottom: 0;
+  width: 100%;
+  min-height: 43px;
+  line-height: 43px;
+  background-color: #eaeef1;
+  text-align: center;
+}*/
+main{
+    min-height: 88vh;
+    margin-bottom: 42px;
+}

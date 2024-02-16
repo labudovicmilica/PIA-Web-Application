@@ -1,0 +1,23 @@
+<div class="m-5 py-5" style="max-width: 40rem;">
+    <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+    <h4>Promena lozinke</h4>
+    <form>
+        <div class="mb-3">
+            <label for="lozinka" class="form-label">Stara lozinka</label>
+            <input style="border-color: rgb(107, 107, 107);" type="password" class="form-control" id="lozinka" [(ngModel)]="staraLozinka" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="nlozinka" class="form-label">Lozinka</label>
+            <input style="border-color: rgb(107, 107, 107);" type="password" class="form-control" id="nlozinka" [(ngModel)]="novaLozinka" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+            <label for="nplozinka" class="form-label">Ponoviti lozinku</label>
+            <input style="border-color: rgb(107, 107, 107);" type="password" class="form-control" id="nplozinka" [(ngModel)]="novaLozinkaPonovo" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button class="btn btn-secondary" (click)="promeni()">Promeni</button>&nbsp;
+        <button class="btn btn-secondary" (click)="odustani()">Odustani od promene lozinke</button>
+
+    </form>
+    </div></div>
+    <p class="text-danger">{{error}}</p>
+</div>

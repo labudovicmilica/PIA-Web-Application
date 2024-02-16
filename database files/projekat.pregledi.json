@@ -1,0 +1,320 @@
+[{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68733"
+  },
+  "naziv": "Pregled uha",
+  "trajanje": 20,
+  "cena": 2500,
+  "spec": "Specijalista ORL",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68734"
+  },
+  "naziv": "Pregled nosa",
+  "trajanje": 25,
+  "cena": 3000,
+  "spec": "Specijalista ORL",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68735"
+  },
+  "naziv": "Pregled grla",
+  "trajanje": 25,
+  "cena": 2500,
+  "spec": "Specijalista ORL",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68736"
+  },
+  "naziv": "Holter pritiska",
+  "trajanje": 35,
+  "cena": 4500,
+  "spec": "Specijalista kardiologije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68737"
+  },
+  "naziv": "Opšti pregled kardiologa",
+  "trajanje": 30,
+  "cena": 3000,
+  "spec": "Specijalista kardiologije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68738"
+  },
+  "naziv": "Ultrazvučni pregled srca",
+  "trajanje": 20,
+  "cena": 3500,
+  "spec": "Specijalista kardiologije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d68739"
+  },
+  "naziv": "Holter EKG 24h",
+  "trajanje": 30,
+  "cena": 5000,
+  "spec": "Specijalista kardiologije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d6873b"
+  },
+  "naziv": "Pregled novorodjenceta",
+  "trajanje": 30,
+  "cena": 3000,
+  "spec": "Specijalista pedijatrije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d6873c"
+  },
+  "naziv": "Opšti pregled pedijatra",
+  "trajanje": 30,
+  "cena": 3500,
+  "spec": "Specijalista pedijatrije",
+  "omogucen": false
+},
+{
+  "_id": {
+    "$oid": "64fb225a466558ee55d6873d"
+  },
+  "naziv": "Sistematski pregled",
+  "trajanje": 15,
+  "cena": 1500,
+  "spec": "Specijalista pedijatrije",
+  "omogucen": true
+},
+{
+  "_id": {
+    "$oid": "64ff41a9d49e94865aaba9b8"
+  },
+  "naziv": "Ispitivanje refleksa",
+  "trajanje": 20,
+  "cena": 2500,
+  "spec": "Specijalista neuropsihijatrije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ff4da1e048fdb4f1cb4481"
+  },
+  "naziv": "Sistematski pregled",
+  "trajanje": 15,
+  "cena": 1500,
+  "spec": "Specijalista ORL",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d00ac43ff231ae5486df"
+  },
+  "naziv": "Test poremećaja štitaste žlezde",
+  "trajanje": 20,
+  "cena": 3000,
+  "spec": "Specijalista endokrinologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d036c43ff231ae5486ea"
+  },
+  "naziv": "Biopsija štitaste žlezde",
+  "trajanje": 30,
+  "cena": 4000,
+  "spec": "Specijalista endokrinologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d084c43ff231ae548701"
+  },
+  "naziv": "Dermatoskopija",
+  "trajanje": 30,
+  "cena": 3500,
+  "spec": "Specijalista dermatologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d0a6c43ff231ae54870d"
+  },
+  "naziv": "Biopsija kože",
+  "trajanje": 25,
+  "cena": 3000,
+  "spec": "Specijalista dermatologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d0e5c43ff231ae548719"
+  },
+  "naziv": "Terapija tečnim azotom",
+  "trajanje": 30,
+  "cena": 2500,
+  "spec": "Specijalista dermatologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d1e4c43ff231ae548749"
+  },
+  "naziv": "Hemijski piling kože",
+  "trajanje": 25,
+  "cena": 2500,
+  "spec": "Specijalista dermatologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d233c43ff231ae548762"
+  },
+  "naziv": "Ispiranje suznih kanala",
+  "trajanje": 15,
+  "cena": 1500,
+  "spec": "Specijalista oftamologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d25cc43ff231ae54876f"
+  },
+  "naziv": "Ispitivanje suvoće oka",
+  "trajanje": 20,
+  "cena": 2000,
+  "spec": "Specijalista oftamologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d314c43ff231ae54878a"
+  },
+  "naziv": "Pregled očnog dna",
+  "trajanje": 40,
+  "cena": 2000,
+  "spec": "Specijalista oftamologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d333c43ff231ae548797"
+  },
+  "naziv": "Merenje očnog pritiska",
+  "trajanje": 20,
+  "cena": 1500,
+  "spec": "Specijalista oftamologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509d493c43ff231ae5487b0"
+  },
+  "naziv": "Psihodijagnostika",
+  "trajanje": 50,
+  "cena": 4000,
+  "spec": "Specijalista neuropsihijatrije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e2a9c43ff231ae54884d"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista ORL",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e2b9c43ff231ae54885a"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista kardiologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e2e6c43ff231ae548872"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista pedijatrije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e2fcc43ff231ae54887f"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista endokrinologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e30ec43ff231ae54888c"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista dermatologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e31ec43ff231ae548899"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista oftamologije",
+  "omogucen": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6509e32cc43ff231ae5488a6"
+  },
+  "naziv": "Kontrolni pregled",
+  "trajanje": 15,
+  "cena": 1000,
+  "spec": "Specijalista neuropsihijatrije",
+  "omogucen": true,
+  "__v": 0
+}]
